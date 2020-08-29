@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!-- -*- coding: utf-8; mode: SGML -*- -->
+
+<container n='secciones' pn='Seccion'>
+	<blockdata n='seccion' name='seccion1' sequence='1' editable_name='unique' help='Puede asignar una o varias inercias, segun sea el caso' morebutton='0'>
+		<value n='iner' pn='inerciaa' v='16' unit_magnitude='L^4' units="m^4"/>
+		<value n='mod_timo' pn='Kz' v='83'/>
+		<value n='area' pn='AREA' v='12'/>
+	</blockdata>
+	<blockdata n='seccion' name='seccion2' sequence='1' editable_name='unique' help='Puede asignar una o varias inercias, segun sea el caso' morebutton='0'>
+		<value n='iner' pn='inerciaa' v='10' unit_magnitude='L^4' units="m^4"/>
+		<value n='mod_timo' pn='Kz' v='83'/>
+		<value n='area' pn='AREA' v='12'/>
+	</blockdata>
+</container>

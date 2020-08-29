@@ -1,0 +1,9 @@
+<Infoproblemtype version='1.0'> 
+	<Program>
+		<Name>PEFICA_TG</Name> 
+		<Version>1.0</Version> 
+		<CustomLibAutomatic>1</CustomLibAutomatic>
+		<CustomLibNativeGroups>1</CustomLibNativeGroups>
+    <ValidatePassword/>
+	</Program>
+</Infoproblemtype>

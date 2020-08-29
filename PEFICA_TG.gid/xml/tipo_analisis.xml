@@ -1,0 +1,11 @@
+<container n="tipo_analisis" pn="Tipo de analisis" help="Seleccione el tipo de analisis de vigas" state="hidden">
+	<blockdata n='tipo_viga' name='Euler_Bernoulli' sequence='1' editable_name='unique' morebutton="0">
+		<value n="num_tipo" pn="Tipo de caso" v='111'/>
+	</blockdata>
+	<blockdata n='tipo_viga' name='Timoshenko1PG' sequence='1' editable_name='unique' morebutton="0">
+		<value n="num_tipo" pn="Tipo de caso" v='112'/>
+	</blockdata>
+	<blockdata n='tipo_viga' name='Timoshenko2PG' sequence='1' editable_name='unique' morebutton="0">
+		<value n="num_tipo" pn="Tipo de caso" v='113'/>
+	</blockdata>
+</container>

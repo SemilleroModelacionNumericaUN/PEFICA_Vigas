@@ -1,0 +1,49 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="rectangle" id="id541152047">
+            <rect x="243.0" y="203.0" width="274.0" height="134.0"
+                latexdraw:borderPos="outer" stroke-width="6.0"
+                stroke="black" fill="#cccccc"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id2076288998">
+            <rect x="303.0" y="163.0" width="154.0" height="174.0"
+                latexdraw:borderPos="outer" stroke-width="6.0"
+                stroke="black" fill="white"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id1311442473">
+            <rect x="163.0" y="343.0" width="434.0" height="214.0"
+                latexdraw:borderPos="outer" stroke-width="6.0"
+                stroke="black" fill="#ff0033"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id1943868595">
+            <rect x="243.0" y="463.0" width="274.0" height="114.0"
+                latexdraw:borderPos="outer" stroke-width="6.0"
+                stroke="black" fill="#cccccc"/>
+        </g>
+    </g>
+    <defs/>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes/>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>20</latexdraw:gridGap>
+            <latexdraw:magneticGrid>true</latexdraw:magneticGrid>
+            <latexdraw:version>3.3.9</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1131</latexdraw:width>
+                <latexdraw:height>814</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0.0</latexdraw:x>
+                <latexdraw:y>23.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

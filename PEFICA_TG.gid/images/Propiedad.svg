@@ -1,0 +1,39 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="bezierCurve" id="id377909186">
+            <path
+                d="M 386.15384615384613 248.0 C 400.0 200.0 364.61538461538464 182.0 300.0 182.0 C 235.38461538461536 182.0 300.0 160.0 364.61538461538464 160.0 C 429.2307692307693 160.0 407.6923076923077 182.0 429.2307692307692 226.0 C 450.7692307692308 270.0 558.4615384615385 270.0 580.0 292.0 C 601.5384615384615 314.0 601.5384615384615 314.0 536.9230769230769 380.0 C 472.30769230769226 446.0 429.2307692307692 446.0 429.2307692307692 380.0 C 429.2307692307692 314.0 429.2307692307692 358.0 429.2307692307692 314.0 C 429.2307692307692 270.0 372.30769230769226 296.0 386.15384615384613 248.0 z "
+                stroke-width="6.0" stroke="black" fill="white" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id1642842420">
+            <polygon
+                points="364.28571428571433,278.8235294117647 420.0,260.0 401.42857142857144,316.47058823529414 215.71428571428572,580.0 160.0,523.5294117647059 "
+                stroke-width="6.0" stroke="black" fill="#ff0033" latexdraw:rotationAngle="0.0"/>
+        </g>
+    </g>
+    <defs/>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes/>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>20</latexdraw:gridGap>
+            <latexdraw:magneticGrid>true</latexdraw:magneticGrid>
+            <latexdraw:version>3.3.9</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1131</latexdraw:width>
+                <latexdraw:height>814</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0.0</latexdraw:x>
+                <latexdraw:y>23.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

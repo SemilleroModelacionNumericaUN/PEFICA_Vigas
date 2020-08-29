@@ -1,0 +1,9 @@
+<container n="grado_apoyos" pn="Tipo de apoyos" icon='pregunta16' help="Aquí se muestra el tipo de apoyos predeterminados, de los cuales puede hacer uso en su problema" tree_state='open'>
+	<blockdata n='grado_apoyo' name='Insertar valores' sequence='1' editable_name='unique' morebutton="0" state='hidden'/>
+	<blockdata n='grado_apoyo' name='Simple' icon="simple16" sequence='1' editable_name='unique' morebutton="0" state='disabled'
+	help='Cuenta con restricción de movimiento en el eje ¨y¨ y lo toma por defecto con un valor igual a ¨0¨, el giro en ¨z¨ y el desplazamiento en ¨x¨ están permitidos'/>
+	<blockdata n='grado_apoyo' name='Fijo' icon="fijo16" sequence='1' editable_name='unique' morebutton="0" state='disabled'
+	help='Cuenta con restricción de movimiento tanto en el eje ¨x¨ como en el eje ¨y¨ y los toma por defecto con un valor igual a ¨0¨, el giro en ¨z¨ está permitido'/>
+	<blockdata n='grado_apoyo' name='Empotrado' icon="empotrado16" sequence='1' editable_name='unique' morebutton="0" state='disabled'
+	help='Cuenta con restricción de movimiento en el eje ¨x¨, el eje ¨y¨ y el giro en ¨z¨, y toma sus valores por defecto igual a ¨0¨'/>
+</container>

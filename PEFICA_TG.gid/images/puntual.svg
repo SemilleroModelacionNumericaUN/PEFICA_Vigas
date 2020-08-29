@@ -1,0 +1,39 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="polygon" id="id1802178825">
+            <polygon
+                points="260.0,380.0 260.0,320.0 300.0,260.0 360.0,220.0 420.0,220.0 480.0,260.0 520.0,320.0 520.0,380.0 480.0,440.0 420.0,480.0 400.0,480.0 400.0,440.0 420.0,440.0 480.0,380.0 480.0,320.0 420.0,260.0 360.0,260.0 300.0,320.0 300.0,380.0 320.0,380.0 280.0,440.0 240.0,380.0 "
+                stroke-width="6.0" stroke="black" fill="#ff0033" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id1565058881">
+            <polygon
+                points="365.2000000000001,169.0 365.2000000000001,509.0 343.0,509.0 389.5,568.0 435.0,509.0 413.79999999999984,509.0 413.79999999999984,169.0 "
+                stroke-width="6.0" stroke="black" fill="white" latexdraw:rotationAngle="0.0"/>
+        </g>
+    </g>
+    <defs/>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes/>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>20</latexdraw:gridGap>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:version>3.3.9</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1131</latexdraw:width>
+                <latexdraw:height>814</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0.0</latexdraw:x>
+                <latexdraw:y>23.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?><!-- -*- coding: utf-8; mode: SGML -*- -->
+
+
+<PEFICA_TG version='1.0'>
+
+	<style show_menubutton_about='1' show_menubutton_search='1'>
+	</style>
+	<display_options frame_width="300" is_frame_open="1"/>
+
+<!-- UNIDADES -->
+<units>  
+		<!--by now it is compulsory define this node if units are used (could be empty if defaults are enougth)-->
+</units>
+  
+<value n='datos' pn=':::---DATOS DEL PROBLEMA---::' state='disabled' icon='datos16'/>
+
+<!-- <container n="unidades" pn="Unidades" help="Aqui selecciona el tipo de unidades que desea usar en el problema"> PENDIENTE
+	<value n="unidades_geom" pn="Unidades geometricas" unit_mesh_definition="1" />
+	<value n="sistema_unidades" pn="Sistema de unidades" units_system_definition="1">
+		<dependencies node="//*[@unit_definition='1' or @unit_mesh_definition='1']" att1='change_units_system' v1='{@v}' actualize_tree='1'/>
+	</value>
+</container> --> 
+
+<!-- CONDICIONES -->
+	<container n="c_analisis" pn='Tipo de Análisis' help='Aquí selecciona el tipo o las combinaciones de análisis  con los cuales desea trabajar' icon='tipo_de_analisis16' >
+		<value n='tipo_analisis' pn='Tipo de Análisis' values='1.Euler_Bernoulli,2.Timoshenko_1PG,3.Timoshenko_2PG,1. y 2.,1. y 3.,2. y 3.,1. 2. y 3.' v='1.Euler_Bernoulli' 
+		help='-Timoshenko_1PG: Utiliza la matriz de rigidez por cortante integrada con un punto de Gauss-Legendre
+		-Timoshenko_2PG: Utiliza la matriz de rigidez por cortante integrada con dos puntos de Gauss-Legendre'>
+			<dependencies value="1.Euler_Bernoulli" node='//value[@n="t_an"]' att1='v' v1="111" actualize='1'/>
+			<dependencies value="1.Euler_Bernoulli" node='//value[@n="mod_poisson"]' att1='state' v1="hidden" actualize='1'/>
+			<dependencies value="1.Euler_Bernoulli" node='//value[@n="mod_timo"]' att1='state' v1="hidden" actualize='1'/>
+			<dependencies value="1.Euler_Bernoulli" node='//value[@n="area"]' att1='state' v1="hidden" actualize='1'/>		
+
+			<dependencies value="2.Timoshenko_1PG" node='//value[@n="t_an"]' att1='v' v1="112" actualize='1'/>
+			<dependencies value="2.Timoshenko_1PG" node='//value[@n="mod_poisson"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="2.Timoshenko_1PG" node='//value[@n="mod_timo"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="2.Timoshenko_1PG" node='//value[@n="area"]' att1='state' v1="normal" actualize='1'/>				
+
+			<dependencies value="3.Timoshenko_2PG" node='//value[@n="t_an"]' att1='v' v1="113" actualize='1'/>
+			<dependencies value="3.Timoshenko_2PG" node='//value[@n="mod_poisson"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="3.Timoshenko_2PG" node='//value[@n="mod_timo"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="3.Timoshenko_2PG" node='//value[@n="area"]' att1='state' v1="normal" actualize='1'/>	
+
+			<dependencies value="1. y 2." node='//value[@n="t_an"]' att1='v' v1="212" actualize='1'/>
+			<dependencies value="1. y 2." node='//value[@n="mod_poisson"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="1. y 2." node='//value[@n="mod_timo"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="1. y 2." node='//value[@n="area"]' att1='state' v1="normal" actualize='1'/>	
+
+			<dependencies value="1. y 3." node='//value[@n="t_an"]' att1='v' v1="213" actualize='1'/>
+			<dependencies value="1. y 3." node='//value[@n="mod_poisson"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="1. y 3." node='//value[@n="mod_timo"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="1. y 3." node='//value[@n="area"]' att1='state' v1="normal" actualize='1'/>	
+
+			<dependencies value="2. y 3." node='//value[@n="t_an"]' att1='v' v1="223" actualize='1'/>
+			<dependencies value="2. y 3." node='//value[@n="mod_poisson"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="2. y 3." node='//value[@n="mod_timo"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="2. y 3." node='//value[@n="area"]' att1='state' v1="normal" actualize='1'/>	
+
+			<dependencies value="1. 2. y 3." node='//value[@n="t_an"]' att1='v' v1="300" actualize='1'/>
+			<dependencies value="1. 2. y 3." node='//value[@n="mod_poisson"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="1. 2. y 3." node='//value[@n="mod_timo"]' att1='state' v1="normal" actualize='1'/>
+			<dependencies value="1. 2. y 3." node='//value[@n="area"]' att1='state' v1="normal" actualize='1'/>	
+			
+		</value>
+	</container>
+
+<!-- PROPIEDADES -->
+	<container n="propiedades" pn="Propiedades" icon="Propiedades16" help="Define las propiedades de los elementos, tanto los materiales como las 
+	secciones de cada uno de ellos">
+	    <include path="xml/materials.xml"/> <!-- Incluye la lista con el material predeterminado, el nombre debe ser materials para utilizar una ayuda de escritura que brinda GiD -->
+		<condition n="c_propiedades" pn="Asignar Propiedad" ov="line" icon="Asignar_propiedad16" 
+		help="Seleccione los elementos a los cuales desea asignar la propiedad">
+			<value n="material" pn="Tipo" editable='1' help="Elija una propiedad de las que creo previamente en el contenedor (Materiales y Secciones)" values_tree='[Traermateriales]'>
+				<edit_command n="Edit materials" pn="Editar o crear propiedades" icon="Subpropiedad16" proc='Editar' actualize_tree='1'/>
+			</value>
+			<!-- <symbol proc="PEFICA_TG::DrawSymbolWeigth" orientation="global"/> PENDIENTE PARA INGRESAR SIMBOLOS-->
+			</condition>
+	</container>
+
+<!-- APOYOS -->
+<container n='apoyos' pn='Apoyos' help='Define los apoyos del problema' icon='simple16'>
+	<include path="xml/apoyos.xml"/>
+	<condition n='asig_restriccion' pn='Asignar Apoyos' ov='point' help='Seleccione los nudos en los cuales va a colocar las restricciones de movimiento' icon='Asignar_punto16'>
+		<value n='tipo_apoyo' pn='Tipo de Apoyo' values_tree='[TraerTiposApoyos]' 
+		help=' - Insertar valores: Puede colocar sus restricciones de manera manual. En caso que tenga algún tipo de asentamiento, puede especificarlo insertando los valores correspondientes \n
+		- Simple: Cuenta con restricción de movimiento en el eje ¨y¨ y lo toma por defecto con un valor igual a ¨0¨, el giro en ¨z¨ y el desplazamiento en ¨x¨ están permitidos	\n
+		- Fijo: Cuenta con restricción de movimiento tanto en el eje ¨x¨ como en el eje ¨y¨ y los toma por defecto con un valor igual a ¨0¨, el giro en ¨z¨ está permitido \n
+		- Empotrado: Cuenta con restricción de movimiento en el eje ¨x¨, el eje ¨y¨ y el giro en ¨z¨, y toma sus valores por defecto igual a ¨0¨' >
+			<dependencies value='Insertar valores' node='../value[@n="cond_rest_x"]' att1="state" v1="normal"/>
+			<dependencies value='Insertar valores' node='../value[@n="cond_rest_y"]' att1="state" v1="normal"/>
+			<dependencies value='Insertar valores' node='../value[@n="cond_rest_z"]' att1="state" v1="normal"/>
+
+			<dependencies value='Simple' node='../value[@n="ind_y"]' att1="v" v1="1"/>
+			<dependencies value='Simple' node='../value[@n="rest_y"]' att1="v" v1="0.000"/>
+			<dependencies value='Simple' node='../value[@n="ind_x"]' att1="v" v1="0"/>
+			<dependencies value='Simple' node='../value[@n="rest_x"]' att1="v" v1="0.000"/>
+			<dependencies value='Simple' node='../value[@n="ind_z"]' att1="v" v1="0"/>
+			<dependencies value='Simple' node='../value[@n="rest_z"]' att1="v" v1="0.000"/>
+			<dependencies value='Simple' node='../value[@n="cond_rest_x"]' att1="state" v1="hidden"/>
+			<dependencies value='Simple' node='../value[@n="cond_rest_y"]' att1="state" v1="hidden"/>
+			<dependencies value='Simple' node='../value[@n="cond_rest_z"]' att1="state" v1="hidden"/>
+
+			<dependencies value='Fijo' node='../value[@n="ind_x"]' att1="v" v1="1"/>
+			<dependencies value='Fijo' node='../value[@n="rest_x"]' att1="v" v1="0.000"/>
+			<dependencies value='Fijo' node='../value[@n="ind_y"]' att1="v" v1="1"/>
+			<dependencies value='Fijo' node='../value[@n="rest_y"]' att1="v" v1="0.000"/>
+			<dependencies value='Fijo' node='../value[@n="ind_z"]' att1="v" v1="0"/>
+			<dependencies value='Fijo' node='../value[@n="rest_z"]' att1="v" v1="0.000"/>
+			<dependencies value='Fijo' node='../value[@n="cond_rest_x"]' att1="state" v1="hidden"/>
+			<dependencies value='Fijo' node='../value[@n="cond_rest_y"]' att1="state" v1="hidden"/>
+			<dependencies value='Fijo' node='../value[@n="cond_rest_z"]' att1="state" v1="hidden"/>
+
+			<dependencies value='Empotrado' node='../value[@n="ind_x"]' att1="v" v1="1"/>
+			<dependencies value='Empotrado' node='../value[@n="rest_x"]' att1="v" v1="0.000"/>
+			<dependencies value='Empotrado' node='../value[@n="ind_y"]' att1="v" v1="1"/>
+			<dependencies value='Empotrado' node='../value[@n="rest_y"]' att1="v" v1="0.000"/>
+			<dependencies value='Empotrado' node='../value[@n="ind_z"]' att1="v" v1="1"/>
+			<dependencies value='Empotrado' node='../value[@n="rest_z"]' att1="v" v1="0.000"/>
+			<dependencies value='Empotrado' node='../value[@n="cond_rest_x"]' att1="state" v1="hidden"/>
+			<dependencies value='Empotrado' node='../value[@n="cond_rest_y"]' att1="state" v1="hidden"/>
+			<dependencies value='Empotrado' node='../value[@n="cond_rest_z"]' att1="state" v1="hidden"/>
+		</value>
+		<value n='cond_rest_x' pn='Restricciòn en "x"' values='ninguno,valor' v='ninguno'>
+			<dependencies value='ninguno' node='../value[@n="ind_x"]' att1="v" v1="0"/>
+			<dependencies value='ninguno' node='../value[@n="rest_x"]' att1="state" v1="hidden"/>
+			<dependencies value='valor' node='../value[@n="ind_x"]' att1="v" v1="1"/>
+			<dependencies value='valor' node='../value[@n="rest_x"]' att1="state" v1="normal"/>
+		</value>
+		<value n='ind_x' pn='Indicador x' state='hidden'/>
+		<value n='rest_x' pn='x [m]' v='0.000' state='hidden' />	
+			<value n='cond_rest_y' pn='Restriccion en "y"' values='ninguno,valor' v='ninguno'>
+			<dependencies value='ninguno' node='../value[@n="ind_y"]' att1="v" v1="0"/>
+			<dependencies value='ninguno' node='../value[@n="rest_y"]' att1="state" v1="hidden"/>
+			<dependencies value='valor' node='../value[@n="ind_y"]' att1="v" v1="1"/>
+			<dependencies value='valor' node='../value[@n="rest_y"]' att1="state" v1="normal"/>
+		</value>
+		<value n='ind_y' pn='Indicador y' state='hidden'/>
+		<value n='rest_y' pn='y [m]' v='0.000' state='hidden' />	
+		<value n='cond_rest_z' pn='Restricciòn en "z"' values='ninguno,valor' v='ninguno'>
+			<dependencies value='ninguno' node='../value[@n="ind_z"]' att1="v" v1="0"/>
+			<dependencies value='ninguno' node='../value[@n="rest_z"]' att1="state" v1="hidden"/>
+			<dependencies value='valor' node='../value[@n="ind_z"]' att1="v" v1="1"/>
+			<dependencies value='valor' node='../value[@n="rest_z"]' att1="state" v1="normal"/>
+		</value>	
+		<value n='ind_z' pn='Indicador z' state='hidden' />
+		<value n='rest_z' pn='z [m]' v='0.000' state='hidden' />
+	</condition>
+</container>
+
+<!-- FUERZAS -->
+<container n='fuerzas' pn='Fuerzas' icon='uniforme16' help='Define las fuerzas presentes en el problema'>
+	<container n='puntuales' pn='Puntuales' icon='puntual16' tree_state='open' help='Incluye las fuerzas puntuales aplicadas directamente en los nudos'>
+		<condition n='aplicar_f_puntual' pn='Asignar Fuerza Puntual / Momento' ov='point' icon='Asignar_punto16' 
+		help='Seleccione los nudos a los cuales les aplicará una fuerza vertical o un momento puntual'>
+			<value n='cond_f_puntual' pn='Fuerza Puntual' values='ninguno,valor' v='ninguno' 
+			help=' - ninguno: No toma ningun valor de fuerza puntual \n
+			- valor: Ingresa el valor de la fuerza puntual vertical'>
+				<dependencies value='ninguno' node='../value[@n="f_puntual"]' att1='state' v1='hidden'/>
+				<dependencies value='valor' node='../value[@n="f_puntual"]' att1='state' v1='normal'/>
+			</value>
+			<value n='f_puntual' pn='F [N]' v='0.000' state='hidden' />
+			<value n='cond_momento' pn='Momento' values='ninguno,valor' v='ninguno' 
+			help=' - ninguno: No toma ningun valor de momento puntual \n
+			- valor: Ingresa el valor del momento puntual'>
+				<dependencies value='ninguno' node='../value[@n="momento"]' att1='state' v1='hidden'/>
+				<dependencies value='valor' node='../value[@n="momento"]' att1='state' v1='normal'/>
+			</value>
+			<value n='momento' pn='M [N·m]' v='0.000' state='hidden' />
+		</condition>
+	</container>
+	<container n='distribuidas' pn='Distribuidas' icon='uniforme16' tree_state='open' help='Incluye las fuerzas distribuidas aplicadas directamente en los elementos' >
+		<condition n='aplicar_f_distribuida' pn='Asignar Fuerza Distribuida Uniforme' ov='line' icon='Asignar_propiedad16' 
+		help='Seleccione los elementos a los cuales les aplicará una fuerza distribuida Uniforme'>
+			<value n='fuerza_dist_constante' pn='F [N/m]' v='0.000' help='Inserte el valor de la fuerza distribuida Uniforme'/>
+		</condition>
+		<condition n='aplicar_f_distribuida_lineal' pn='Asignar Fuerza Distribuida Lineal' ov='line' icon='Asignar_propiedad16'
+		help='Seleccione los elementos a los cuales les aplicará una fuerza distribuida lineal'>
+			<value n='m_ini' pn='Magnitud inicial [N/m]' v='0.000' 
+			help='Inserte la magnitud inicial de la carga lineal distribuida.'/>
+			<value n='m_fin' pn='Magnitud final [N/m]' v='0.000' 
+			help='Inserte la magnitud final de la carga lineal distribuida'/>
+		</condition>
+	</container>
+</container>
+<value n='impr' pn=':::---ANALISIS E IMPRESION---::' state='disabled' icon='datos16'/>
+
+<container n='analisis' pn='Análisis' icon='interpolacion16'>
+	<value n='n_interpolaciones' pn='Núm. interpolaciones por elemento' v='5'/>
+</container>
+<container n='impresion' pn='Impresión' icon='imprimir16'>
+	<value n='t_impresion' pn='Tipo de impresión' values='0. Ninguno,1. En ventana de comandos de Octave,2. En graficas de Octave,4. En GiD,1. y 2.,Impresion general - TODO' v='Impresion general - TODO'/>
+</container>
+
+  <!-- procs -->
+  <procs>
+
+<!-- 	<proc n='TipoDeAnalisis' args='args'> PENDIENTE
+      <![CDATA[
+      PEFICA_TG::TipoDeAnalisis $domNode $args
+      ]]>
+    </proc> -->
+
+    <proc n='Traermateriales' args='args'>
+      <![CDATA[
+      PEFICA_TG::Traermateriales $domNode $args
+      ]]>
+    </proc>
+	
+    <proc n='TraerTiposApoyos' args='args'>
+      <![CDATA[
+      PEFICA_TG::TraerTiposApoyos $domNode $args
+      ]]>
+    </proc>
+
+    <proc n='Editar' args='args'>
+      <![CDATA[
+      PEFICA_TG::Editar $domNode $dict $boundary_conds $args
+      ]]>
+    </proc>
+	
+<!-- 	<proc n='Traerseccion' args='args'> PENDIENTE
+      <![CDATA[
+      PEFICA_TG::Traerseccion $domNode $args
+      ]]>
+    </proc> -->
+
+<!--     <proc n='Editarseccion' args='args'> PENDIENTE
+      <![CDATA[
+      PEFICA_TG::Editarseccion $domNode $dict $boundary_conds $args
+      ]]>
+    </proc>  -->
+  </procs> 
+
+</PEFICA_TG>

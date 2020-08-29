@@ -1,0 +1,49 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="polygon" id="id998857996">
+            <polygon
+                points="160.0,307.0 284.864864864865,160.0 284.864864864865,420.0 160.0,580.0 "
+                stroke-width="6.0" stroke="black" fill="#ff0033" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id394236668">
+            <polygon
+                points="517.5675675675674,440.0 517.5675675675674,360.0000000000002 568.6486486486488,300.0 568.6486486486488,379.9999999999998 "
+                stroke-width="6.0" stroke="black" fill="white" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id2086940483">
+            <polygon
+                points="245.1351351351351,300.0 568.6486486486488,300.0 517.5675675675674,360.0000000000002 194.05405405405418,360.0000000000002 "
+                stroke-width="6.0" stroke="black" fill="white" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="polygon" id="id1960977671">
+            <polygon
+                points="194.05405405405418,360.0000000000002 194.05405405405418,440.0 517.5675675675674,440.0 517.5675675675674,360.0000000000002 "
+                stroke-width="6.0" stroke="black" fill="white" latexdraw:rotationAngle="0.0"/>
+        </g>
+    </g>
+    <defs/>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:latexIncludes/>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:unit>CM</latexdraw:unit>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+            <latexdraw:gridGap>20</latexdraw:gridGap>
+            <latexdraw:magneticGrid>true</latexdraw:magneticGrid>
+            <latexdraw:version>3.3.9</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1131</latexdraw:width>
+                <latexdraw:height>814</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0.0</latexdraw:x>
+                <latexdraw:y>23.0</latexdraw:y>
+            </latexdraw:position>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

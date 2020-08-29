@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!-- -*- coding: utf-8; mode: SGML -*- -->
+
+<container n="materials" pn="Materiales y Secciones" icon='Propiedad16' help="Defina el material y la sección a utilizar.
+-Si desea añadir un nuevo material, copie la propiedad base {Propiedad (Copiar +)} (Dando clic derecho sobre la propiedad - clic izquierdo en copiar) y modifique los atributos del elemento "
+tree_state='open'>
+	<blockdata n='material' name='Propiedad (Copiar +)' sequence='1' editable_name='unique' morebutton="0" icon='Subpropiedad16'>
+		<value n="mat" pn=":::---MATERIAL---::" state='disabled' />
+		<value n="mod_elast" pn="Módulo de Young [Pa]" v='21.5E9' />
+		<value n="mod_poisson" pn="Coeficiente de Poisson" v='0.2' state='hidden' />
+		<value n="sec" pn=":::---SECCION---::" state='disabled' />
+		<value n='iner' pn='Inercia_z [m^4]' v='16E-4' />
+		<value n='area' pn='Area [m^2]'  state='hidden' v='0.12'/>
+		<value n='mod_timo' pn='Kz (Timoshenko)' state='hidden' v='0.83'/>
+		<value n='t_an' pn='Tipo de analisis' v='111' state='hidden'/>
+	</blockdata>
+</container>

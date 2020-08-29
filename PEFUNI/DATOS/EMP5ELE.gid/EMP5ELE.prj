@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gid version="13.5">
+  <pre>
+    <layer_to_use name="Layer0"/>
+    <groups>
+      <group id="1" name="Asignar Propiedad Auto1" color="#ff00ffff"/>
+      <group id="2" name="Asignar Apoyos Auto1" color="#008000ff"/>
+      <group id="3" name="Asignar Fuerza Puntual / Momento Auto1" color="#ffff00ff"/>
+    </groups>
+    <entities_groups>
+      <entities_group name="points">
+        <vector name="entity_ids" length="2" type="integer">1 2</vector>
+        <vector name="entity_num_groups" length="2" type="ushort">1 1</vector>
+        <vector name="entity_groups" length="2" type="ushort">2 3</vector>
+      </entities_group>
+      <entities_group name="lines">
+        <vector name="entity_ids" length="1" type="integer">1</vector>
+        <vector name="entity_num_groups" length="1" type="ushort">1</vector>
+        <vector name="entity_groups" length="1" type="ushort">1</vector>
+      </entities_group>
+      <entities_group name="nodes">
+        <vector name="entity_ids" length="6" type="integer">1:6</vector>
+        <vector name="entity_num_groups" length="6" type="ushort">2 1x4 2</vector>
+        <vector name="entity_groups" length="8" type="ushort">3 1x5 2 1</vector>
+      </entities_group>
+      <entities_group name="elements">
+        <vector name="entity_ids" length="5" type="integer">1:5</vector>
+        <vector name="entity_num_groups" length="5" type="ushort">1x5</vector>
+        <vector name="entity_groups" length="5" type="ushort">1x5</vector>
+      </entities_group>
+    </entities_groups>
+  </pre>
+</gid>

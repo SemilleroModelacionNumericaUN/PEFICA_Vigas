@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gid version="13.5">
+  <pre>
+    <layer_to_use name="Layer0"/>
+    <groups>
+      <group id="1" name="Asignar Apoyos Auto1" color="#ff00ffff"/>
+      <group id="2" name="Asignar Fuerza Distribuida Uniforme Auto1" color="#008000ff"/>
+    </groups>
+    <entities_groups>
+      <entities_group name="points">
+        <vector name="entity_ids" length="8" type="integer">1:8</vector>
+        <vector name="entity_num_groups" length="8" type="ushort">1x8</vector>
+        <vector name="entity_groups" length="8" type="ushort">1x8</vector>
+      </entities_group>
+      <entities_group name="lines">
+        <vector name="entity_ids" length="7" type="integer">1:7</vector>
+        <vector name="entity_num_groups" length="7" type="ushort">1x7</vector>
+        <vector name="entity_groups" length="7" type="ushort">2x7</vector>
+      </entities_group>
+      <entities_group name="nodes">
+        <vector name="entity_ids" length="1009" type="integer">1:1009</vector>
+        <vector name="entity_num_groups" length="1009" type="ushort">2 1x143 2 1x143 2 1x143 2 1x143 2 1x143 2 1x143 2 1x143 2</vector>
+        <vector name="entity_groups" length="1017" type="ushort">1 2x144 1 2x144 1 2x144 1 2x144 1 2x144 1 2x144 1 2x144 1 2</vector>
+      </entities_group>
+      <entities_group name="elements">
+        <vector name="entity_ids" length="1008" type="integer">1:1008</vector>
+        <vector name="entity_num_groups" length="1008" type="ushort">1x1008</vector>
+        <vector name="entity_groups" length="1008" type="ushort">2x1008</vector>
+      </entities_group>
+    </entities_groups>
+  </pre>
+</gid>
